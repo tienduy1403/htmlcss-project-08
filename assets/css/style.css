@@ -140,6 +140,7 @@ a {
 .hero__media {
     position: relative;
     width: 514px;
+    max-height: 705px;
     height: 81.128vh;
 }
 
@@ -334,6 +335,7 @@ a {
 }
 
 .works-item {
+    position: relative;
     justify-content: space-between;
     padding: 24px 23px 23px 34px;
     background: #fbfaff;
@@ -341,6 +343,12 @@ a {
 
 .works-item:hover {
     cursor: pointer;
+}
+
+.work-item__decor {
+    position: absolute;
+    top: 0;
+    right: -30px;
 }
 
 .works-item__heading {
@@ -375,6 +383,8 @@ a {
 }
 
 .works-item__img {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
 }
@@ -467,9 +477,29 @@ a {
 
 /* --------------------- Feedback --------------------- */
 .feedback {
+    position: relative;
     margin-top: -315px;
     padding: 473px 0 76px;
     background: #fbfaff;
+    overflow: hidden;
+}
+
+.feedback__decor-left,
+.feedback__decor-right,
+.cta__decor-left {
+    position: absolute;
+    bottom: 0;
+    rotate: 10deg;
+}
+
+.cta__decor-left,
+.feedback__decor-left {
+    left: -165px;
+}
+
+.feedback__decor-right {
+    right: -74px;
+    bottom: -16px;
 }
 
 .feedback__body {
@@ -581,6 +611,10 @@ a {
 /* --------------------- Faq --------------------- */
 .faq {
     padding: 95px 0 0;
+}
+
+.faq__inner {
+    max-width: 1010px;
 }
 
 .faq__row {
@@ -711,19 +745,44 @@ a {
 
 /* CTA Bottom */
 .cta__bottom {
+    position: relative;
     margin-top: 40px;
     padding: 68px 0;
     display: flex;
     flex-direction: column;
     background: #fbfaff;
     align-items: center;
+    overflow: hidden;
+}
+
+.cta__bottom__img,
+.cta__bottom-heading,
+.cta__bottom-desc,
+.cta__btn {
+    position: relative;
+    z-index: 1;
+}
+
+.cta__decor {
+    position: absolute;
+}
+
+.cta__decor-mid {
+    rotate: 10deg;
+    top: -204px;
+    left: 200px;
+}
+
+.cta__decor-right {
+    top: 0;
+    right: 0;
 }
 
 .cta__bottom-heading {
     margin-top: 15px;
 }
 
-.cta__bottom-heading {
+.cta__bottom-desc {
     max-width: 570px;
     margin-top: 20px;
     text-align: center;
