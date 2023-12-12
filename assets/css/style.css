@@ -57,10 +57,21 @@ a {
 
 .header {
     position: sticky;
-    top: -20px;
+    top: 0;
     padding-top: 20px;
     background: #fbfaff;
     z-index: 9;
+}
+
+.header__inner {
+    height: 50px;
+}
+
+.header__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 }
 
 .header__inner,
@@ -90,7 +101,9 @@ a {
 .feedback-item__avt,
 .feedback__active,
 .footer__row,
-.footer__contact {
+.footer__contact,
+.services__active,
+.cta__active {
     display: flex;
     align-items: center;
 }
@@ -128,7 +141,7 @@ a {
     display: flex;
     align-items: flex-end;
     background: #fbfaff;
-    height: calc(100vh - 88.5px);
+    height: calc(100vh - 70px);
 }
 
 .hero__col {
@@ -452,6 +465,8 @@ a {
 }
 
 .about__video {
+    position: relative;
+    z-index: 1;
     margin-top: 70px;
     width: 100%;
 }
@@ -571,19 +586,27 @@ a {
     line-height: 1.8;
 }
 
-.feedback__active {
+.feedback__active,
+.services__active,
+.cta__active {
     margin-top: 40px;
     justify-content: center;
     column-gap: 16px;
 }
 
-.feedback__active label {
+.feedback__active label,
+.services__active label,
+.cta__active label {
     position: relative;
     cursor: pointer;
 }
 
 .feedback__active label::before,
-.feedback__active label::after {
+.feedback__active label::after,
+.services__active label::before,
+.services__active label::after,
+.cta__active label::before,
+.cta__active label::after {
     content: "";
     display: block;
     width: 16px;
@@ -591,11 +614,15 @@ a {
     border-radius: 50%;
 }
 
-.feedback__active label::before {
+.feedback__active label::before,
+.services__active label::before,
+.cta__active label::before {
     background: #cac9d0;
 }
 
-.feedback__active label::after {
+.feedback__active label::after,
+.services__active label::after,
+.cta__active label::after {
     display: none;
     position: absolute;
     top: 0;
@@ -604,7 +631,9 @@ a {
     outline-offset: 3px;
 }
 
-.feedback__active [type="radio"]:checked + label::after {
+.feedback__active [type="radio"]:checked + label::after,
+.services__active [type="radio"]:checked + label::after,
+.cta__active [type="radio"]:checked + label::after {
     display: block;
 }
 
@@ -746,7 +775,7 @@ a {
 /* CTA Bottom */
 .cta__bottom {
     position: relative;
-    margin-top: 40px;
+    margin-top: 140px;
     padding: 68px 0;
     display: flex;
     flex-direction: column;
@@ -794,15 +823,21 @@ a {
 
 /* --------------------- Footer --------------------- */
 .footer__inner {
-    margin-top: 50px;
+    margin-top: 70px;
     max-width: 1429px;
 }
 
 .footer__top {
+    position: relative;
     padding-bottom: 32px;
     display: flex;
     justify-content: space-between;
+    height: 100px;
     border-bottom: 1px solid #0c0720;
+}
+
+.bottom__logo {
+    top: 30px;
 }
 
 .footer__row {

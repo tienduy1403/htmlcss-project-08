@@ -29,6 +29,7 @@
                     <a href="mailto:hi@arif.interactive">
                         <div class="header__letter">
                             <img
+                                class="header__letter-img"
                                 src="./assets/img/letter-logo.svg"
                                 alt="logo"
                             />
@@ -68,11 +69,59 @@
                 </label>
             </div>
         </header>
+        <!--------------------- Header tablet + mobile -------------------->
+        <header class="header-mobile">
+            <input type="checkbox" name="toggle-menu" id="toggle-menu" hidden />
+            <!-- Overlay -->
+            <label class="overlay" for="toggle-menu">
+                <div class="close-x">
+                    <svg
+                        class="toggle-menu__icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="16"
+                        width="12"
+                        viewBox="0 0 384 512"
+                    >
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                        <path
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+                        />
+                    </svg>
+                </div>
+            </label>
+            <!-- Drawer Menu -->
+            <div class="drawer-menu">
+                <!-- Logo  -->
+                <a class="drawer-menu__logo" href="/">
+                    <img
+                        class="sidebar__logo"
+                        src="./assets/img/logo-memoji.png"
+                        alt="logo"
+                    />
+                    <p class="drawer-menu__brand">Potfolio</p>
+                </a>
+                <!-- Navigation -->
+                <ul class="drawer-menu__navigation">
+                    <li>
+                        <a href="#!" class="header__link">Project</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="header__link">Journey</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="header__link">Service</a>
+                    </li>
+                    <li>
+                        <a href="#!" class="header__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
         <main>
             <!--------------------- Hero -------------------->
             <section class="hero">
                 <div class="container">
-                    <div class="row">
+                    <div class="row hero__inner">
                         <div class="col-lg-6 col-md-12 hero__col">
                             <!-- Hero Media -->
                             <figure class="hero__media">
@@ -208,9 +257,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div
-                            class="col-lg-2 col-md-6 col-sm-6 col-6 client__lastcol"
-                        >
+                        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
                             <div class="client__column">
                                 <a class="client__brand" href="#!">
                                     <img
@@ -252,70 +299,117 @@
                         </div>
                     </div>
                     <!-- Services-Body -->
-                    <div class="row">
-                        <div class="col-lg-4 col-md-12 col-sm-12 col-12">
-                            <a href="#!">
-                                <article class="services-item">
-                                    <div class="services-item__icon">
-                                        <img
-                                            src="./assets/img/product-design.png"
-                                            alt=""
-                                            class="services-item__img"
-                                        />
-                                    </div>
-                                    <h3 class="services-item__heading">
-                                        Product design
-                                    </h3>
-                                    <p class="section-desc services-item__desc">
-                                        Lorem ipsum dolor sit amet, solor
-                                        adipiscing elit. Non nisl solor ut
-                                        elementum turpis.
-                                    </p>
-                                </article>
-                            </a>
+                    <div class="services__wrap">
+                        <div class="row services__body">
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                                <a href="#!">
+                                    <article class="services-item">
+                                        <div class="services-item__icon">
+                                            <img
+                                                src="./assets/img/product-design.png"
+                                                alt=""
+                                                class="services-item__img"
+                                            />
+                                        </div>
+                                        <h3 class="services-item__heading">
+                                            Product design
+                                        </h3>
+                                        <p
+                                            class="section-desc services-item__desc"
+                                        >
+                                            Lorem ipsum dolor sit amet, solor
+                                            adipiscing elit. Non nisl solor ut
+                                            elementum turpis.
+                                        </p>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                                <a href="#!">
+                                    <article class="services-item">
+                                        <div class="services-item__icon">
+                                            <img
+                                                src="./assets/img/ux-ui.svg"
+                                                alt=""
+                                                class="services-item__img"
+                                            />
+                                        </div>
+                                        <h3 class="services-item__heading">
+                                            UI/UX Design
+                                        </h3>
+                                        <p
+                                            class="section-desc services-item__desc"
+                                        >
+                                            Lorem ipsum dolor sit amet, solor
+                                            adipiscing elit. Non nisl solor ut
+                                            elementum turpis.
+                                        </p>
+                                    </article>
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+                                <a href="#!">
+                                    <article class="services-item">
+                                        <div class="services-item__icon">
+                                            <img
+                                                src="./assets/img/interactive.png"
+                                                alt=""
+                                                class="services-item__img"
+                                            />
+                                        </div>
+                                        <h3 class="services-item__heading">
+                                            Interactive design
+                                        </h3>
+                                        <p
+                                            class="section-desc services-item__desc"
+                                        >
+                                            Lorem ipsum dolor sit amet, solor
+                                            adipiscing elit. Non nisl solor ut
+                                            elementum turpis.
+                                        </p>
+                                    </article>
+                                </a>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 col-12">
-                            <a href="#!">
-                                <article class="services-item">
-                                    <div class="services-item__icon">
-                                        <img
-                                            src="./assets/img/ux-ui.svg"
-                                            alt=""
-                                            class="services-item__img"
-                                        />
-                                    </div>
-                                    <h3 class="services-item__heading">
-                                        UI/UX Design
-                                    </h3>
-                                    <p class="section-desc services-item__desc">
-                                        Lorem ipsum dolor sit amet, solor
-                                        adipiscing elit. Non nisl solor ut
-                                        elementum turpis.
-                                    </p>
-                                </article>
-                            </a>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 col-12">
-                            <a href="#!">
-                                <article class="services-item">
-                                    <div class="services-item__icon">
-                                        <img
-                                            src="./assets/img/interactive.png"
-                                            alt=""
-                                            class="services-item__img"
-                                        />
-                                    </div>
-                                    <h3 class="services-item__heading">
-                                        Interactive design
-                                    </h3>
-                                    <p class="section-desc services-item__desc">
-                                        Lorem ipsum dolor sit amet, solor
-                                        adipiscing elit. Non nisl solor ut
-                                        elementum turpis.
-                                    </p>
-                                </article>
-                            </a>
-                        </div>
+                    </div>
+                    <!-- Services-Mobile -->
+                    <div class="services__active">
+                        <input
+                            type="radio"
+                            name="services"
+                            id="services1"
+                            hidden
+                        />
+                        <label for="services1"></label>
+                        <input
+                            type="radio"
+                            name="services"
+                            id="services2"
+                            hidden
+                        />
+                        <label for="services2"></label>
+                        <input
+                            type="radio"
+                            name="services"
+                            id="services3"
+                            hidden
+                            checked
+                        />
+                        <label for="services3"></label>
+                        <input
+                            type="radio"
+                            name="services"
+                            id="services4"
+                            hidden
+                        />
+                        <label for="services4"></label>
+                        <input
+                            type="radio"
+                            name="services"
+                            id="services5"
+                            hidden
+                        />
+                        <label for="services5"></label>
                     </div>
                 </div>
             </section>
@@ -809,7 +903,7 @@
                     </section>
                     <!-- CTA BODY -->
                     <div class="cta__body">
-                        <div class="row">
+                        <div class="row cta__inner">
                             <div class="col-lg-4 col-md-12 col-sm-12 col-12">
                                 <figure class="cta-item">
                                     <a href="#!"
@@ -845,6 +939,25 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- CTA-Mobile -->
+                    <div class="cta__active">
+                        <input type="radio" name="cta" id="cta1" hidden />
+                        <label for="cta1"></label>
+                        <input type="radio" name="cta" id="cta2" hidden />
+                        <label for="cta2"></label>
+                        <input
+                            type="radio"
+                            name="cta"
+                            id="cta3"
+                            hidden
+                            checked
+                        />
+                        <label for="cta3"></label>
+                        <input type="radio" name="cta" id="cta4" hidden />
+                        <label for="cta4"></label>
+                        <input type="radio" name="cta" id="cta5" hidden />
+                        <label for="cta5"></label>
                     </div>
                 </div>
                 <!-- CTA Bottom -->
@@ -905,7 +1018,7 @@
                     <!-- Logo  -->
                     <a href="/">
                         <img
-                            class="header__logo"
+                            class="header__logo bottom__logo"
                             src="./assets/img/logo-memoji.png"
                             alt="logo"
                         />
