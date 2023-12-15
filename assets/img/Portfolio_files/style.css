@@ -351,7 +351,6 @@ a {
     justify-content: space-between;
     padding: 24px 23px 23px 34px;
     background: #fbfaff;
-    overflow: hidden;
 }
 
 .works-item:hover {
@@ -458,12 +457,6 @@ a {
     line-height: 1.36;
     letter-spacing: 0.168rem;
     text-decoration-line: underline;
-}
-
-.about__stats-desc {
-    color: #51586a;
-    font-size: 1.8rem;
-    line-height: 1.67;
 }
 
 .about__media {
